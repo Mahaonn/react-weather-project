@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <footer>
+        <footer className="fs-6 fst-italic">
           This project was coded by {""}{" "}
           <a
             href="https://mywebdevjourney.netlify.app/about"

@@ -3,17 +3,22 @@ import "./Weather.css";
 export default function Weather() {
   return (
     <div className="Weather">
-      <form>
+      <form className="form">
         <div className="row">
           <div className="col-9">
             <input
               className="form-control"
               type="text"
               placeholder="Enter a city.."
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
-            <input className="btn btn-primary" type="submit" value="search" />
+            <input
+              className="btn btn-primary w-100"
+              type="submit"
+              value="search"
+            />
           </div>
         </div>
       </form>
@@ -22,13 +27,23 @@ export default function Weather() {
         <li>Wednesday</li>
         <li>Mostly Cloudy</li>
       </ul>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Mostly Cloudy"
-          />
-          6°C
+          <div className="clearfix">
+            <img
+              className="img float-start"
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Mostly Cloudy"
+            />
+            <div className="float-start">
+              <span className="temperature">6</span>
+              <div className="units">
+                <span className="unit">°C</span>
+                <span className="line"></span>
+                <span className="unit">°F</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <ul>
